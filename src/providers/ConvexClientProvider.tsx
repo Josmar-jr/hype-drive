@@ -18,6 +18,9 @@ export default function ConvexClientProvider({
       publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
       appearance={{
         baseTheme: dark,
+        variables: {
+          colorPrimary: "#6366f1",
+        },
         elements: {
           card: "rounded-xl border bg-card text-card-foreground shadow border-border p-6",
           headerTitle: "text-foreground",
@@ -38,7 +41,8 @@ export default function ConvexClientProvider({
           footerActionLink: "text-primary hover:text-primary",
           formFieldWarningText: "text-xs",
           formFieldSuccessText: "text-xs",
-          organizationSwitcherTrigger: "border border-border",
+          organizationSwitcherTrigger: "border-red-500 p-1",
+          organizationPreviewMainIdentifier: "text-sm",
         },
       }}
     >
