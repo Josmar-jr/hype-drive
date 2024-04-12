@@ -1,6 +1,6 @@
 "use client";
 
-import { useAuth, useUser, UserProfile } from "@clerk/nextjs";
+import { useAuth, useUser } from "@clerk/nextjs";
 import { Avatar, AvatarImage } from "./ui/avatar";
 import { Button } from "./ui/button";
 import {
@@ -34,7 +34,7 @@ export function UserNav() {
           variant="ghost"
           className="relative h-8 w-8 rounded-full select-none"
         >
-          <Avatar className="h-8 w-8">
+          <Avatar className="size-9">
             <AvatarImage src={user?.imageUrl} alt={user?.fullName ?? ""} />
           </Avatar>
         </Button>

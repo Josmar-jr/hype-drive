@@ -27,8 +27,8 @@ export function Logo(props: ComponentProps<"svg">) {
           y2="33.587"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C7D2FE" />
-          <stop offset="1" stop-color="#C7D2FE" stop-opacity="0" />
+          <stop stopColor="#C7D2FE" />
+          <stop offset="1" stopColor="#C7D2FE" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_704_240"
@@ -38,8 +38,8 @@ export function Logo(props: ComponentProps<"svg">) {
           y2="7.9681"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#4338CA" />
-          <stop offset="1" stop-color="#C7D2FE" />
+          <stop stopColor="#4338CA" />
+          <stop offset="1" stopColor="#C7D2FE" />
         </linearGradient>
       </defs>
     </svg>
