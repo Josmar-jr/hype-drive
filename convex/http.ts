@@ -28,6 +28,13 @@ http.route({
             tokenIdentifier: `https://${process.env.CLERK_HOSTNAME}|${result.data.id}`,
           });
           break;
+        case "organizationMembership.created":
+          console.log("TESTE");
+          await ctx.runMutation(internal.users.addOrganizationIdToUser, {
+            tokenIdentifier: `https://${process.env.CLERK_HOSTNAME}|${result.data.public_user_data.user_id}`,
+            organizationId: result.data.organization.id,
+          });
+          break;
       }
 
       return new Response(null, {

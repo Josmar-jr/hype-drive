@@ -8,5 +8,6 @@ export default defineSchema({
   }).index("by_organization_id", ["organizationId"]),
   users: defineTable({
     tokenIdentifier: v.string(),
-  }),
+    organizationIds: v.array(v.string()),
+  }).index("by_token_identifier", ["tokenIdentifier"]),
 });
