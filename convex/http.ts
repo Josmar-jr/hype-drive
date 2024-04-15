@@ -25,11 +25,10 @@ http.route({
       switch (result.type) {
         case "user.created":
           await ctx.runMutation(internal.users.createUser, {
-            tokenIdentifier: `https://${process.env.CLERK_HOSTNAME}|${result.data.id}`,
+            tokenIdentifier: `https://logical-aphid-7.clerk.accounts.dev|${result.data.id}`,
           });
           break;
         case "organizationMembership.created":
-          console.log("TESTE");
           await ctx.runMutation(internal.users.addOrganizationIdToUser, {
             tokenIdentifier: `https://${process.env.CLERK_HOSTNAME}|${result.data.public_user_data.user_id}`,
             organizationId: result.data.organization.id,
