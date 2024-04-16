@@ -10,9 +10,7 @@ export default function AppLayout({ children }: { children: ReactNode }) {
       <div className="bg-background min-h-screen">
         <Header />
 
-        <main className="p-6 max-w-7xl mx-auto grid place-content-center">
-          {children}
-        </main>
+        <main className="p-6 container mx-auto">{children}</main>
 
         <Toaster />
       </div>
