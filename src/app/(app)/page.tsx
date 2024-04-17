@@ -4,6 +4,7 @@ import { useQuery } from "convex/react";
 import { UploadButton } from "./_components/upload-button";
 import { api } from "../../../convex/_generated/api";
 import { useOrganization } from "@clerk/nextjs";
+import { FileCard } from "./_components/file-card";
 
 export default function Home() {
   const organizationQuery = useOrganization();
@@ -31,7 +32,9 @@ export default function Home() {
         <UploadButton />
       </div>
 
-      <ul>{allFiles?.map((file) => <li key={file._id}>{file.name}</li>)}</ul>
+      <div className="grid grid-cols-4 gap-4">
+        {allFiles?.map((file) => <FileCard key={file._id} file={file} />)}
+      </div>
     </>
   );
 }

@@ -41,8 +41,11 @@ export default function ConvexClientProvider({
           footerActionLink: "text-primary hover:text-primary",
           formFieldWarningText: "text-xs",
           formFieldSuccessText: "text-xs",
-          organizationSwitcherTrigger: "border-red-500 p-1",
+          organizationSwitcherTrigger: "border border-border",
           organizationPreviewMainIdentifier: "text-sm",
+          identityPreviewEditButtonIcon: "text-foreground",
+          formResendCodeLink: "text-muted-foreground",
+          otpCodeFieldInput: "focus:border-primary",
         },
       }}
     >

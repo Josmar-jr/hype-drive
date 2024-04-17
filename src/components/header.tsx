@@ -3,6 +3,8 @@ import { Logo } from "./logo";
 import { Separator } from "./ui/separator";
 import { Button } from "./ui/button";
 import { UserNav } from "./user-nav";
+
+import { TeamSwitcher } from "./team-switcher";
 import { OrganizationSwitcher } from "@clerk/nextjs";
 
 export function Header() {
@@ -16,7 +18,7 @@ export function Header() {
         <Separator orientation="vertical" className="h-5 -ml-2" />
 
         <span className="pt-1.5">
-          <OrganizationSwitcher />
+          <TeamSwitcher />
         </span>
       </div>
       <div className="flex items-center gap-4">
